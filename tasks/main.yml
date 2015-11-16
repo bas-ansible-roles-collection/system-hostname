@@ -1,0 +1,6 @@
+---
+# Sets the hostname and FQDN of a machine
+
+- include: hostname.yml tags=BARC_CONFIGURE,BARC_CONFIGURE_SYSTEM,BARC_CONFIGURE_NETWORKING
+
+- include: fqdn.yml     tags=BARC_CONFIGURE,BARC_CONFIGURE_SYSTEM,BARC_CONFIGURE_NETWORKING

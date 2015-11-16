@@ -1,0 +1,10 @@
+---
+# Tests the FQDN is set correctly
+
+- name: get system FQDN
+  command: hostname -f
+  register: system_hostname_test_fact_fqdn
+- name: assert system FQDN is set correctly
+  assert:
+    that:
+      - "system_hostname_test_fact_fqdn.stdout == '{{ inventory_hostname }}'"

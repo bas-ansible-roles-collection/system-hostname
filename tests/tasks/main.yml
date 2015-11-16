@@ -1,0 +1,12 @@
+---
+# Tests the changes to a machines hostname and FQDN made by this role
+
+# Management and configuration checks
+# These checks mirror individual tasks to ensure they execute correctly
+# (I.e. that they create a user in the right package or create the correct config file)
+
+# Core configuration
+
+- include: hostname.yml
+
+- include: fqdn.yml

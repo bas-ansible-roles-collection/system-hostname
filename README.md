@@ -1,0 +1,121 @@
+# System Hostname (`system-hostname`)
+
+Configures the hostname and FQDN of a machine
+
+**Part of the BAS Ansible Role Collection (BARC)**
+
+## Overview
+
+* Using the Ansible inventory hostname, sets the current hostname of the machine (i.e. lasts until rebooting)
+* Using the Ansible inventory hostname, sets the permanent hostname of the machine (i.e. used after rebooting)
+* Using the Ansible inventory hostname, sets the Fully Qualified Domain Name of the machine, for the IPv4 interface
+* Using the Ansible inventory hostname, sets the Fully Qualified Domain Name of the machine, for the IPv4 interface
+
+## Quality Assurance
+
+This role uses manual testing to ensure the features offered by this role work as advertised. 
+See `tests/README.md` for more information.
+
+## Dependencies
+
+* None
+
+## Requirements
+
+* An Ansible inventory **SHOULD** correctly define the FQDN of each machine to be configured by this role [1].
+
+E.g.
+
+```
+# This is an Ansible inventory file.
+
+[group]
+machine-1.net.example.com
+```
+
+[1] Where only a hostname is defined (e.g. `machine-1`), no FQDN will be set by this role, the hostname still will.
+
+## Usage
+
+### Typical playbook
+
+Note: It is assumed you have already created a suitable inventory file.
+
+```yaml
+---
+
+- name: setup system hostnames
+  hosts: all
+  become: yes
+  vars:
+  roles:
+    - BARC.system-hostname
+```
+
+### Tags
+
+BARC roles use standardised tags to control which aspects of an environment are changed by roles. Where relevant, tags
+will be applied at a role, or task(s) level, as indicated below.
+
+This role uses the following tags, for all tasks:
+
+* [**BARC_CONFIGURE**](https://antarctica.hackpad.com/BARC-Standardised-Tags-AviQxxiBa3y#:h=BARC_CONFIGURE)
+* [**BARC_CONFIGURE_SYSTEM**](https://antarctica.hackpad.com/BARC-Standardised-Tags-AviQxxiBa3y#:h=BARC_CONFIGURE_SYSTEM)
+* [**BARC_CONFIGURE_NETWORKING**](https://antarctica.hackpad.com/BARC-Standardised-Tags-AviQxxiBa3y#:h=BARC_CONFIGURE_NETWORK)
+
+### Variables
+
+None.
+
+## Developing
+
+### Issue tracking
+
+Issues, bugs, improvements, questions, suggestions and other tasks related to this package are managed through the 
+[BAS Ansible Role Collection](https://jira.ceh.ac.uk/projects/BARC) (BARC) project on Jira.
+
+This service is currently only available to BAS or NERC staff, although external collaborators can be added on request.
+See our contributing policy for more information.
+
+### Source code
+
+All changes should be committed, via pull request, to the canonical repository, which for this project is:
+
+`git clone ssh://git@stash.ceh.ac.uk:7999/barc/system-hostname.git`
+
+A mirror of this repository is maintained on GitHub. Changes are automatically pushed from the canonical repository to
+this mirror, in a one-way process.
+
+`git@github.com:antarctica/ansible-system-hostname.git`
+
+Note: The canonical repository is only accessible within the NERC firewall. External collaborators, please make pull 
+requests against the mirrored GitHub repository and these will be merged as appropriate.
+
+### Contributing policy
+
+This project welcomes contributions, see `CONTRIBUTING.md` for our general policy.
+
+The [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/) 
+workflow is used to manage the development of this project:
+
+* Discrete changes should be made within feature branches, created from and merged back into develop 
+(where small changes may be made directly)
+* When ready to release a set of features/changes, create a release branch from develop, update documentation as 
+required and merge into master with a tagged, semantic version (e.g. v1.2.3)
+* After each release, the master branch should be merged with develop to restart the process
+* High impact bugs can be addressed in hotfix branches, created from and merged into master (then develop) directly
+
+## Acknowledgements
+
+This role is heavily based on the [ANXS.hostname](https://github.com/ANXS/hostname) role.
+
+## Licence
+
+Copyright 2015 NERC BAS.
+
+Unless stated otherwise, all documentation is licensed under the Open Government License - version 3. All code is
+licensed under the MIT license.
+
+Copies of these licenses are included within this role.
+
+

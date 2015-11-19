@@ -5,6 +5,8 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+## 0.1.1 - 19/11/2015
+
 ### Added
 
 * Git attributes file to produce cleaner release archives and improve language stats on GitHub

@@ -16,6 +16,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Changed
 
 * Updating role dependencies for testing
+* Improved comments for provisioning playbooks
 * Updating testing provisioning to latest conventions
 
 ## 0.1.0 - 16/11/2015

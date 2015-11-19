@@ -4,6 +4,7 @@
 - name: get system FQDN
   command: hostname -f
   register: system_hostname_test_fact_fqdn
+  changed_when: false
 - name: assert system FQDN is set correctly
   assert:
     that:

@@ -4,6 +4,7 @@
 - name: get current system hostname
   command: hostname
   register: system_hostname_test_fact_current_hostname
+  changed_when: false
 - name: assert current system hostname is set correctly
   assert:
     that:
@@ -12,6 +13,7 @@
 - name: get permanent system hostname
   command: cat /etc/hostname
   register: system_hostname_test_fact_permanent_hostname
+  changed_when: false
 - name: assert permanent system hostname is set correctly
   assert:
     that:

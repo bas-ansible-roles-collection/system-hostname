@@ -5,6 +5,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* `.gitignore` patterns for keeping the roles/BARC.prelude/meta/main.yml file
+
 ## 0.1.0 - 16/11/2015
 
 ### Added

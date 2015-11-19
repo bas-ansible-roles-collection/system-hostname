@@ -12,6 +12,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Fixed
 
 * `.gitignore` patterns for keeping the roles/BARC.prelude/meta/main.yml file
+* Erroneous change events for testing tasks
 
 ### Changed
 

@@ -12,6 +12,8 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Fixed
 
 * Incorrect group variable for BARC role name
+* README formatting and typos
+* Minor corrections to other files for formatting and typos
 
 ### Removed
 

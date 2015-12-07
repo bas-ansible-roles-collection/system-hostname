@@ -35,6 +35,10 @@ machine-1.net.example.com
 
 [1] Where only a hostname is defined (e.g. `machine-1`), no FQDN will be set by this role, the hostname still will.
 
+## Limitations
+
+* None
+
 ## Usage
 
 ### Typical playbook
@@ -44,10 +48,10 @@ Note: It is assumed you have already created a suitable inventory file.
 ```yaml
 ---
 
-- name: setup system hostnames
+- name: configure system hostname
   hosts: all
   become: yes
-  vars:
+  vars: []
   roles:
     - BARC.system-hostname
 ```
@@ -117,5 +121,3 @@ Unless stated otherwise, all documentation is licensed under the Open Government
 licensed under the MIT license.
 
 Copies of these licenses are included within this role.
-
-

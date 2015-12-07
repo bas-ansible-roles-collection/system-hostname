@@ -5,6 +5,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Note to explain why testing dependencies do not include meta-roles this role is a part of
+
 ## 0.1.1 - 19/11/2015
 
 ### Added

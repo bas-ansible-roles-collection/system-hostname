@@ -9,6 +9,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 * Note to explain why testing dependencies do not include meta-roles this role is a part of
 
+### Fixed
+
+* Incorrect group variable for BARC role name
+
 ### Removed
 
 * Unnecessary CI testing playbook, as CI is not used for this role yet

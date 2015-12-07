@@ -9,6 +9,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 * Note to explain why testing dependencies do not include meta-roles this role is a part of
 
+### Removed
+
+* Unnecessary CI testing playbook, as CI is not used for this role yet
+
 ## 0.1.1 - 19/11/2015
 
 ### Added

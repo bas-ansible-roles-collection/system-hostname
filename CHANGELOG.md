@@ -7,6 +7,16 @@ Note: Developers - make sure to set the `BARC_role_version` variable when releas
 
 ## [Unreleased][unreleased]
 
+## 0.2.1 - 05/02/2016
+
+### Fixed
+
+* BARC manifest support updated to fix issues where multiple BARC roles are applied to the same machine
+
+### Removed
+
+* Un-needed role defaults .gitignore file
+
 ## 0.2.0 - 05/02/2016
 
 ### Added

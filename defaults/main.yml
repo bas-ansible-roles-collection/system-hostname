@@ -1,0 +1,6 @@
+---
+# Default variables - inventory or playbook overrides will be respected
+
+# BARC specific variables
+BARC_role_name: system-hostname
+BARC_role_version: 0.2.0

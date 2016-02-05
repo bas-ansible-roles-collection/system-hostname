@@ -7,5 +7,9 @@
 
 # See: http://docs.ansible.com/ansible/galaxy.html for more information.
 
-- src: BARC.system-users
-  version: v0.2.0
+# As this role is part of the 'system-security' and 'system-core' meta-roles we need to explicitly list the other roles
+# dependencies which would normally be provided for us by listing the meta role.
+
+# Unlike projects, role dependencies are not pinned to ensure roles always work with the latest role versions.
+
+- src: bas-ansible-roles-collection.system-users

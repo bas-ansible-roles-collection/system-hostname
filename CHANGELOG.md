@@ -3,7 +3,34 @@
 All notable changes to this role will be documented in this file.
 This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+Note: Developers - make sure to set the `BARC_role_version` variable when releasing new versions of this role.
+
 ## [Unreleased][unreleased]
+
+## 0.2.0 - 05/02/2016
+
+### Added
+
+* Note to explain why testing dependencies do not include meta-roles this role is a part of
+* Local facts to record this role has been applied to a system and its version, plus supporting documentation sections
+
+### Fixed
+
+* Incorrect group variable for BARC role name
+* README formatting and typos
+* Minor corrections to other files for formatting and typos
+* Testing role dependencies should always use latest versions
+* Missing testing information for lack of functional tests
+
+### Changed
+
+* Migrating from old Ansible Galaxy namespace, 'BARC', to 'bas-ansible-roles-collection'
+* Migrating from old Ansible Galaxy 'categories' to new 'tags' meta-data
+* Migrating from old Repository in 'antarctica' to 'bas-ansible-roles-collection'
+
+### Removed
+
+* Unnecessary CI testing playbook, as CI is not used for this role yet
 
 ## 0.1.1 - 19/11/2015
 

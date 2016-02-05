@@ -35,7 +35,25 @@ machine-1.net.example.com
 
 [1] Where only a hostname is defined (e.g. `machine-1`), no FQDN will be set by this role, the hostname still will.
 
+## Limitations
+
+* None
+
 ## Usage
+
+### BARC manifest
+
+By default, BARC roles will record that they have been applied to a system. This is recorded using a set of 
+[Ansible local facts](http://docs.ansible.com/ansible/playbooks_variables.html#local-facts-facts-d), specifically:
+
+* `ansible_local.barc-nginx.general.role_applied` - to indicate that this role has been applied to a system
+* `ansible_local.barc-nginx.general.role_version` - to indicate the version of this this role that has been applied
+
+Note: You **SHOULD** use this feature to determine whether this role has been applied to a system.
+
+If you do not want these facts to be set by this role, you **MUST** skip the **BARC_SET_MANIFEST** tag. No support is 
+offered in this case, as other roles or use-cases may rely on this feature. Therefore you **SHOULD** not disable this
+feature.
 
 ### Typical playbook
 
@@ -44,12 +62,12 @@ Note: It is assumed you have already created a suitable inventory file.
 ```yaml
 ---
 
-- name: setup system hostnames
+- name: configure system hostname
   hosts: all
   become: yes
-  vars:
+  vars: []
   roles:
-    - BARC.system-hostname
+    - bas-ansible-roles-collection.system-hostname
 ```
 
 ### Tags
@@ -62,17 +80,30 @@ This role uses the following tags, for all tasks:
 * [**BARC_CONFIGURE**](https://antarctica.hackpad.com/BARC-Standardised-Tags-AviQxxiBa3y#:h=BARC_CONFIGURE)
 * [**BARC_CONFIGURE_SYSTEM**](https://antarctica.hackpad.com/BARC-Standardised-Tags-AviQxxiBa3y#:h=BARC_CONFIGURE_SYSTEM)
 * [**BARC_CONFIGURE_NETWORKING**](https://antarctica.hackpad.com/BARC-Standardised-Tags-AviQxxiBa3y#:h=BARC_CONFIGURE_NETWORK)
+* [**BARC_SET_MANIFEST**](https://antarctica.hackpad.com/BARC-Standardised-Tags-AviQxxiBa3y#:h=BARC_SET_MANIFEST)
 
 ### Variables
 
-None.
+#### *BARC_role_name*
+
+* **MUST NOT** be specified
+* Specifies the name of this role within the BAS Ansible Roles Collection (BARC) used for setting local facts
+* See the *BARC roles manifest* section for more information
+* Example: system-hostname
+
+#### *BARC_role_version*
+
+* **MUST NOT** be specified
+* Specifies the name of this role within the BAS Ansible Roles Collection (BARC) used for setting local facts
+* See the *BARC roles manifest* section for more information
+* Example: 2.0.0
 
 ## Developing
 
 ### Issue tracking
 
 Issues, bugs, improvements, questions, suggestions and other tasks related to this package are managed through the 
-[BAS Ansible Role Collection](https://jira.ceh.ac.uk/projects/BARC) (BARC) project on Jira.
+[BAS Ansible Roles Collection](https://jira.ceh.ac.uk/projects/BARC) (BARC) project on Jira.
 
 This service is currently only available to BAS or NERC staff, although external collaborators can be added on request.
 See our contributing policy for more information.
@@ -86,7 +117,7 @@ All changes should be committed, via pull request, to the canonical repository, 
 A mirror of this repository is maintained on GitHub. Changes are automatically pushed from the canonical repository to
 this mirror, in a one-way process.
 
-`git@github.com:antarctica/ansible-system-hostname.git`
+`git@github.com:bas-ansible-roles-collection/system-hostname.git`
 
 Note: The canonical repository is only accessible within the NERC firewall. External collaborators, please make pull 
 requests against the mirrored GitHub repository and these will be merged as appropriate.
@@ -105,6 +136,11 @@ required and merge into master with a tagged, semantic version (e.g. v1.2.3)
 * After each release, the master branch should be merged with develop to restart the process
 * High impact bugs can be addressed in hotfix branches, created from and merged into master (then develop) directly
 
+### Release procedure
+
+See [here](https://antarctica.hackpad.com/BARC-Overview-and-Policies-SzcHzHvitkt#:h=Release-procedures) for general 
+release procedures for BARC roles.
+
 ## Acknowledgements
 
 This role is heavily based on the [ANXS.hostname](https://github.com/ANXS/hostname) role.
@@ -117,5 +153,3 @@ Unless stated otherwise, all documentation is licensed under the Open Government
 licensed under the MIT license.
 
 Copies of these licenses are included within this role.
-
-

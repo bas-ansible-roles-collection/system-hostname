@@ -10,3 +10,6 @@
 - include: hostname.yml
 
 - include: fqdn.yml
+
+- include: register-role.yml
+

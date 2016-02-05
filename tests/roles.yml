@@ -12,5 +12,4 @@
 
 # Unlike projects, role dependencies are not pinned to ensure roles always work with the latest role versions.
 
-- src: BARC.system-users
-  version: v0.2.0
+- src: bas-ansible-roles-collection.system-users

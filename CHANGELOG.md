@@ -7,6 +7,8 @@ Note: Developers - make sure to set the `BARC_role_version` variable when releas
 
 ## [Unreleased][unreleased]
 
+## 0.2.0 - 05/02/2016
+
 ### Added
 
 * Note to explain why testing dependencies do not include meta-roles this role is a part of

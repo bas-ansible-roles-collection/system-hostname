@@ -17,6 +17,13 @@ Note: Developers - make sure to set the `BARC_role_version` variable when releas
 * Incorrect group variable for BARC role name
 * README formatting and typos
 * Minor corrections to other files for formatting and typos
+* Testing role dependencies should always use latest versions
+
+### Changed
+
+* Migrating from old Ansible Galaxy namespace, 'BARC', to 'bas-ansible-roles-collection'
+* Migrating from old Ansible Galaxy 'categories' to new 'tags' meta-data
+* Migrating from old Repository in 'antarctica' to 'bas-ansible-roles-collection'
 
 ### Removed
 

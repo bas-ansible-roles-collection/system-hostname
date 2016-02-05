@@ -67,7 +67,7 @@ Note: It is assumed you have already created a suitable inventory file.
   become: yes
   vars: []
   roles:
-    - BARC.system-hostname
+    - bas-ansible-roles-collection.system-hostname
 ```
 
 ### Tags
@@ -103,7 +103,7 @@ This role uses the following tags, for all tasks:
 ### Issue tracking
 
 Issues, bugs, improvements, questions, suggestions and other tasks related to this package are managed through the 
-[BAS Ansible Role Collection](https://jira.ceh.ac.uk/projects/BARC) (BARC) project on Jira.
+[BAS Ansible Roles Collection](https://jira.ceh.ac.uk/projects/BARC) (BARC) project on Jira.
 
 This service is currently only available to BAS or NERC staff, although external collaborators can be added on request.
 See our contributing policy for more information.
@@ -117,7 +117,7 @@ All changes should be committed, via pull request, to the canonical repository, 
 A mirror of this repository is maintained on GitHub. Changes are automatically pushed from the canonical repository to
 this mirror, in a one-way process.
 
-`git@github.com:antarctica/ansible-system-hostname.git`
+`git@github.com:bas-ansible-roles-collection/system-hostname.git`
 
 Note: The canonical repository is only accessible within the NERC firewall. External collaborators, please make pull 
 requests against the mirrored GitHub repository and these will be merged as appropriate.
